@@ -1,0 +1,137 @@
+
+
+
+
+.categories{
+  background-image: url('../images/pattern-dark.png');
+  background-repeat: repeat;
+  background-size: 300px;
+   
+  color: var(--color-light);
+   
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 40px 80px;
+
+  position: relative;
+  padding-top: 100px;
+
+
+
+  &__header{
+    margin-bottom: 40px;
+
+    h1{
+      color: var(--color-pink);
+      font-size: var(--text-xs);
+      text-transform: uppercase;
+      margin-bottom: 10px;
+
+    }
+    h2{
+      font-size: var(--text-lg);
+      margin-bottom: 10px;
+
+    }
+    p{
+      font-weight: 100;
+      font-size: var(--text-xs);
+    }
+  }
+
+  &__grid{
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px;
+
+
+  }
+
+  &-card{
+    p{
+        font-size: var(--text-xs);
+        font-weight: 300;
+    }
+
+  background-color: var(--color-dark);
+  border: 1px solid var(--color-dark);
+  border-radius: 8px;
+  padding: 32px 24px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+
+  &__icon{
+    background-image: url('../images/icon/category/dark.svg');
+    background-size: auto 150%;
+    background-position: 0 center;
+
+    border-radius: 50px;
+    aspect-ratio: 1;
+    height: 30px;
+    display: inline-block;
+    
+ 
+
+        &--action{
+        background-position-x: -7px;
+        background-color: rgb(225, 107, 107);
+
+        }
+
+        &--comedie{
+        background-position-x: -32px;
+        background-color: rgb(121, 228, 194);
+
+        }
+
+         &--drame{
+        background-position-x: -56px;
+        background-color: rgb(209, 98, 198);
+
+        }
+
+         &--sciencefiction{
+        background-position-x: -80px;
+        background-color: rgb(107, 160, 225);
+
+        }
+
+        &--horreur{
+        background-position-x: -104px;
+        background-color: rgb(67, 216, 208);
+
+        }
+
+        &--animation{
+        background-position-x: -129px;
+        background-color: rgb(225, 168, 107);
+
+        }
+
+        &--classique{
+        background-position-x: -153px;
+        background-color: rgb(149, 236, 236);
+
+        }
+
+        &--cultes{
+        background-position-x: -177px;
+        background-color: rgb(225, 211, 107);
+
+        }
+     }
+
+  }
+}
+
+ 
+
+    
+
+ 

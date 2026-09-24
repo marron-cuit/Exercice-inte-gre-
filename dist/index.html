@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>movie-king</title>
+  <link rel="stylesheet" href="styles/style.min.css">
+</head>
+<body>
+
+
+    <!--Nav principale-->
+    <nav class="navbar">
+
+      <a href="#" class="navbar__logo">
+        <img src="images/LOGO-FULL.svg" alt="Movie Kings">
+      </a>
+
+    <ul class="navbar__menu">
+
+      <li class="navbar__item">
+        <a href="#" class="header__nav-link">
+          <span class="header__nav-icon">🏠</span>
+          Accueil
+        </a>
+      </li>
+
+      <li class="navbar__item">
+        <a href="#" class="header__nav-link">
+          <span class="header__nav-icon">👑</span>
+          Jouer
+        </a>
+      </li>
+
+      <li class="navbar__item">
+        <a href="#" class="header__nav-link">
+          <span class="header__nav-icon">⭐</span>
+          Classement
+        </a>
+      </li>
+
+    </ul>
+
+
+    <!--Langues-->
+
+    <ul class="navbar__speaking">
+      <li>
+        <a href="#" class="navbar__languages navbar__languages-fr">FR</a>
+      </li>
+      <li>
+        <a href="#" class="navbar__languages navbar__languages-en">EN</a>
+      </li>
+      <li>
+        <a href="#" class="navbar__languages navbar__languages-de">DE</a>
+      </li>
+    </ul>
+  </nav>
+
+
+  <main>
+
+<!-- Hero -->
+
+    <section class="hero">
+      <div class="hero__content">
+
+        <h1 class="hero__title">
+          Deviens le Roi<br> de la république !
+        </h1>
+
+        <p class="hero__description">
+          Reconnais la réplique et choisis le bon film.<br>Grimpe au classement et tente de gagner des places.
+        </p>
+
+        <a href="#" class="hero__button">
+          Jouer maintenant
+        </a>
+      </div>
+
+      <div class="hero__image">
+        <img src="images/hero-ghoster.png" alt="king" />
+      </div>
+      
+    </section>
+
+
+
+
+
+
+<!-- Les regles -->
+
+  <section class="regle">
+      <div class="regle__content">
+
+        <h1 class="regle__title">
+          Phase du jeu </h1>
+
+        <h2 class="regle__title">
+          Comment jouer ? </h2>
+
+        <p class="regle__description">
+          Chaque semaine, les meilleurs joueurs sont couronnés et remportent des récompenses.
+        </p>
+      </div>
+
+      <!-- Les étapes -->
+
+
+      <div class="steps__container">
+
+         <!-- étape 1 -->
+        <div class="steps__grid steps__grid--step1">
+
+          <h1 class="steps-title"><span class="steps-number">1</span>Lis la réplique</h1>
+          <p class="steps-description">
+            Toujours culte, en VO ou en VF, selon la catégorie que tu as choisie.
+          </p>
+        </div>
+
+         <!-- étape 2 -->
+          <div class="steps__grid steps__grid--step2">
+            
+            <h1 class="steps-title"><span class="steps-number">2</span>Devine le film</h1>
+            <p class="steps-description">
+              Dévoile les propositions ou devine directement pour gagner plus de points !
+            </p>
+          </div>
+
+            <!-- étape 3 -->
+            <div class="steps__grid steps__grid--step3">
+             
+              <h1 class="steps-title"> <span class="steps-number">3</span>Gagne des points</h1>
+              <p class="steps-description">
+                Décroche la couronne et tente de gagner des places de cinéma.
+              </p>
+            </div>
+      </div>   
+  </section>
+
+
+<!-- monster -->
+
+<section class="monster">
+
+  <!-- avatar-->
+  <div class="monster__avatar">
+
+    <img class="monster__crown" alt="Couronne"
+      src="images/king-crown.png">
+
+    <img class="monster__ghost" alt="Monstre"
+      src="images/ghoster-blue-happy.svg">
+
+  </div>
+
+
+  <!-- header + bubble -->
+  <div class="monster__content">
+
+    <header class="monster__header">
+      <h1 class="monster__title">
+        Cultissime
+      </h1>
+
+      <p class="monster__subtitle">
+        → citation du jour à retrouver.
+        <strong>Teste-toi !</strong>
+      </p>
+    </header>
+
+
+    <div class="monster__bubble">
+
+      <blockquote class="monster__bubble-quote">
+        « Il nous faudrait un plus gros bateau. »
+      </blockquote>
+
+     <div class="monster__bubble-content">
+  
+  <div class="monster__bubble-info"> 
+    <p class="monster__bubble-text">
+      réponse est cachée pour ne pas gâcher le plaisir. 
+     Tu ne trouves pas ?</p>
+    <a class="monster__bubble-link">Découvre la réponse →</a>
+  </div>
+
+  <a href="#" class="monster__btn">Révéler la réponse</a>
+
+  </div>
+</div>
+</div>
+</section>
+
+
+ <section class="categories">
+       <div class="categories__header">
+
+        <h1 class="categories__title">
+          catégories </h1>
+
+        <h2 class="categories__title">
+          Explore les catégories </h2>
+
+        <p class="categories__description">
+          Choisis l'univers qui te fait vibrer et découvre de nouvelles répliques à chaque session.
+        </p>
+
+      </div>
+
+      <div class="categories__grid">
+
+        <!-- Categorie-Action -->
+
+        <div class="categories-card categories-card--action">  
+            <span class="categories-card__icon categories-card__icon--action"></span>
+            <h3 class="categories-card__title">Action</h3>
+            <p class="categories-card__description">
+              Poursuites, héros et répliques qui ont marqué le cinéma d’action.
+            </p>
+        </div>
+
+         <!-- Categorie-Comedie -->
+
+        <div class="categories-card categories-card--comedie">  
+            <span class="categories-card__icon categories-card__icon--comedie"></span>
+            <h3 class="categories-card__title">Comédie</h3>
+            <p class="categories-card__description">
+              Répliques cultes, personnages inoubliables et humour qui fait encore rire aujourd’hui.
+            </p>
+        </div>
+
+         <!-- Categorie-Drame -->
+
+        <div class="categories-card categories-card--drame">  
+            <span class="categories-card__icon categories-card__icon--drame"></span>
+            <h3 class="categories-card__title">Drame</h3>
+            <p class="categories-card__description">
+              Moments forts, personnages complexes et dialogues qui restent en mémoire.
+            </p>
+        </div>
+
+         <!-- Categorie-Science fiction -->
+
+        <div class="categories-card categories-card--sciencefiction">  
+            <span class="categories-card__icon categories-card__icon--sciencefiction"></span>
+            <h3 class="categories-card__title">Science-fiction</h3>
+            <p class="categories-card__description">
+              Mondes futurs, héros légendaires et répliques interstellaires.
+            </p>
+        </div>
+
+         <!-- Categorie-Horreur -->
+
+        <div class="categories-card categories-card--horreur">  
+            <span class="categories-card__icon categories-card__icon--horreur"></span>
+            <h3 class="categories-card__title">Horreur</h3>
+            <p class="categories-card__description">
+              Répliques glaçantes, suspense et frissons garantis.
+            </p>
+        </div>
+
+         <!-- Categorie-Animation -->
+
+        <div class="categories-card categories-card--animation">  
+            <span class="categories-card__icon categories-card__icon--animation"></span>
+            <h3 class="categories-card__title">Animation</h3>
+            <p class="categories-card__description">
+              Répliques inoubliables des films d’animation qui font sourire petits et grands.
+            </p>
+        </div>
+
+           <!-- Categorie-Classique -->
+
+        <div class="categories-card categories-card--classique">  
+            <span class="categories-card__icon categories-card__icon--classique"></span>
+            <h3 class="categories-card__title">Classique</h3>
+            <p class="categories-card__description">
+              Répliques emblématiques des films qui ont marqué l’histoire du cinéma.
+            </p>
+        </div>
+
+           <!-- Categorie-Cultes-->
+
+        <div class="categories-card categories-card--cultes">  
+            <span class="categories-card__icon categories-card__icon--cultes"></span>
+            <h3 class="categories-card__title">Cultes</h3>
+            <p class="categories-card__description">
+              Ces répliques que tout le monde connaît, même sans avoir vu le film.
+            </p>
+        </div>
+ </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

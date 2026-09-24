@@ -1,0 +1,20 @@
+.monster {
+  min-height: 600px;
+  display: flex;
+  align-items: flex-start;
+  gap: 80px;
+  padding: 40px 80px;
+  background-color: #ff3f61;
+}
+.monster__avatar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+.monster__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}/*# sourceMappingURL=monster.css.map */
