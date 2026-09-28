@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! modern-normalize v3.0.1 | MIT License | https://github.com/sindresorhus/modern-normalize */
 /*
 Document
@@ -257,6 +258,22 @@ p {
   background-color: var(--color-light);
   border-bottom: 9px solid black;
 }
+.navbar__link-icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-image: url("../images/icon/icon_nav.svg");
+  background-size: auto 150%;
+}
+.navbar__link-icon--accueil {
+  background-position: -5px 0;
+}
+.navbar__link-icon--jouer {
+  background-position: -34px 0;
+}
+.navbar__link-icon--classement {
+  background-position: -63px 0;
+}
 .navbar__logo {
   width: 100px;
 }
@@ -273,7 +290,28 @@ p {
   padding: 10px;
 }
 .navbar__languages-fr {
-  background-color: var(--color-primary);
+  background-color: var(--color-yellow);
+}
+
+.footer {
+  height: 100px;
+  width: 100%;
+  color: var(--color-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3.5rem;
+  font-size: var(--text-xs);
+  box-sizing: border-box;
+  background-color: var(--color-dark);
+  border-top: 5px solid var(--color-light);
+}
+.footer__logo {
+  width: 100px;
+}
+.footer__menu {
+  display: flex;
+  gap: 40px;
 }
 
 .hero {
@@ -296,7 +334,10 @@ p {
   text-shadow: -4px 4px 1px black;
 }
 .hero__image {
+  display: flex;
   flex: 1;
+  justify-content: center;
+  align-items: center;
 }
 .hero__button {
   background-color: var(--color-yellow);
@@ -305,7 +346,49 @@ p {
   font-weight: 900;
   font-size: var(--text-lg);
 }
+.hero__img-mobile {
+  display: none;
+}
 
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1.5rem;
+  }
+  .hero__image {
+    flex: initial;
+    text-align: center;
+    order: -1;
+    margin-bottom: -10px;
+  }
+  .hero__img-desktop {
+    display: none;
+  }
+  .hero__img-mobile {
+    display: inline-block;
+    width: 300px;
+  }
+  .hero__content {
+    padding: 0;
+    gap: 1.5rem;
+    align-items: center;
+    text-align: center;
+  }
+  .hero__title {
+    font-size: 4rem;
+    line-height: 3.7rem;
+    text-align: center;
+  }
+  .hero__description {
+    font-size: 1rem;
+    line-height: 1.4;
+    max-width: 300px;
+  }
+  .hero__button {
+    white-space: nowrap;
+  }
+}
 .regle {
   padding: 5rem;
   background-color: var(--color-dark);
@@ -352,21 +435,46 @@ p {
   padding-right: 20px;
 }
 
+@media (max-width: 768px) {
+  .regle {
+    padding: 2rem 3rem;
+  }
+  .regle .steps__container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .regle .steps__container .steps__grid {
+    padding: 20px 0;
+    border-top: 1px dashed grey;
+    border-bottom: 1px dashed grey;
+  }
+  .regle .steps__container .steps-title {
+    /* Aligne le numéro et le titre sur la même ligne */
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .regle .steps__container .steps-number {
+    /* Maintient l'espacement entre le numéro et le titre */
+    padding-right: 15px;
+    line-height: 1;
+  }
+}
 .monster {
   display: flex;
   align-items: flex-start;
-  gap: 80px;
-  padding: 0px 80px;
+  padding: 30px 20px 0 20px;
   background-image: url("../images/pattern-red.png");
   background-repeat: repeat;
 }
 .monster__avatar {
   position: relative;
-  margin-bottom: -80px;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 200px;
+  width: 170px;
+  margin-bottom: -20px;
 }
 .monster__crown {
   margin-bottom: -35px;
@@ -377,19 +485,16 @@ p {
   margin: 0 0 20px 0;
 }
 .monster__content {
-  padding: 5rem;
+  margin-inline: 5rem;
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 .monster__info {
   display: flex;
   flex-direction: column;
   gap: 8px;
-}
-.monster__header {
-  margin: 10px;
 }
 .monster__header h1 {
   font-size: var(--text-lg);
@@ -399,6 +504,7 @@ p {
   margin-top: 5px;
 }
 .monster__bubble {
+  position: relative;
   margin-top: 20px;
   padding: 20px;
   background-color: var(--color-dark);
@@ -428,6 +534,52 @@ p {
   font-weight: 500;
 }
 
+@media (max-width: 767px) {
+  .monster {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px 0 20px;
+    display: flex;
+  }
+  .monster__content {
+    margin-inline: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    display: contents;
+  }
+  .monster__header {
+    order: 1; /* Place le titre en premier */
+    text-align: center;
+  }
+  .monster__avatar {
+    width: 220px;
+    margin-bottom: -100px;
+    z-index: 1;
+    order: 2; /* Place le monstre au milieu */
+    margin-bottom: -90px; /* Chevauchement léger sur le bloc noir */
+  }
+  .monster__bubble {
+    position: relative;
+    z-index: 2;
+    order: 3; /* Place le bloc d'information sous le monstre */
+    text-align: left;
+    margin-bottom: -50px;
+  }
+  .monster__bubble-content {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
+  .monster__btn {
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    margin-top: 10px;
+    text-align: center;
+  }
+}
 .categories {
   background-image: url("../images/pattern-dark.png");
   background-repeat: repeat;
@@ -517,4 +669,40 @@ p {
 .categories-card__icon--cultes {
   background-position-x: -177px;
   background-color: rgb(225, 211, 107);
+}
+
+@media (max-width: 768px) {
+  .categories {
+    padding: 2rem 3rem;
+  }
+  .categories__header {
+    margin-bottom: 24px;
+  }
+  .categories__grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .categories-card {
+    padding: 20px 16px;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    -moz-column-gap: 16px;
+         column-gap: 16px;
+    row-gap: 6px;
+    align-items: center;
+  }
+  .categories-card__icon {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .categories-card__title {
+    grid-column: 1;
+    grid-row: 2;
+    margin: 0;
+  }
+  .categories-card__description {
+    grid-column: 2;
+    grid-row: 1/span 2;
+    align-self: center;
+  }
 }/*# sourceMappingURL=style.css.map */

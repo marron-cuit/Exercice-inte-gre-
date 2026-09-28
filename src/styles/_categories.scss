@@ -133,5 +133,47 @@
  
 
     
+@media (max-width: 768px) {
+  .categories{
+    padding: 2rem 3rem;
+    
 
+    &__header {
+      margin-bottom: 24px;
+    }
+
+    &__grid {
+      grid-template-columns: 1fr; // Une seule colonne de cartes
+      gap: 16px;
+    }
+
+    &-card {
+      padding: 20px 16px;
+      display: grid;
+      
+      // Colonne 1: Icône + Titre | Colonne 2: Description
+      grid-template-columns: 100px 1fr; 
+      column-gap: 16px;
+      row-gap: 6px;
+      align-items: center;
+
+      &__icon {
+        grid-column: 1;
+        grid-row: 1;
+      }
+
+      &__title {
+        grid-column: 1;
+        grid-row: 2;
+        margin: 0;
+      }
+
+      &__description {
+        grid-column: 2;
+        grid-row: 1 / span 2; // S'étend sur la hauteur de la carte
+        align-self: center;
+      }
+    }
+  }
+}
  
