@@ -1,0 +1,45 @@
+.ready {
+  background: var(--color-dark);
+  color: var(--color-light);
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+
+  grid-template-areas: 
+  "left right
+  bottom bottom";
+
+
+
+
+
+  &__content-left-title {
+    grid-area: left;
+
+
+
+  }
+
+
+  &__content-right {
+    grid-area: right;
+
+    
+  }
+
+  &__content-bottom {
+    grid-area: bottom;
+
+
+  }
+ 
+}
+
+.monster__view {
+  background: pink;
+  width: 150px;
+  height: 150px;
+
+  //background-image: url("../images/ghoster-red.svg");
+  //background-size: 450px 150px;
+  background-position: 0 0;
+}
