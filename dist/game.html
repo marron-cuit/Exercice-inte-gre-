@@ -134,56 +134,58 @@
       </div>
     </div>
 
-
     <!-- COLONNE DROITE -->
     <div class="ready__content-right">
+      <h2 class="ready__content-right-title">Faisons connaissance !</h2>
 
-      <h2 class="ready__content-right-title">
-        Faisons connaissance !
-      </h2>
-
-      <div class="character-options">
-
+      <div class="character-picker">
+        <!-- Palette de couleurs -->
         <div class="colors">
-          <span class="color color--red"></span>
-          <span class="color color--turquoise"></span>
-          <span class="color color--white"></span>
+          <span class="colors__label">couleur</span>
+          <div class="colors__list">
+            <button class="color color--red color--active"></button>
+            <button class="color color--teal"></button>
+            <button class="color color--white"></button>
+          </div>
         </div>
 
-        <div class="humeur">
-          <span class="humeur-1">♜</span>
-          <span class="humeur-2">♜</span>
-          <span class="humeur-3">♜</span>
-          <span class="humeur-4">♜</span>
+        <!-- Zone Monstre + Humeurs -->
+        <div class="character-display">
+          <div class="monster__view"></div>
+
+          <div class="humeur">
+            <span class="humeur__label">humeur</span>
+            <div class="humeur__list">
+              <button class="humeur__item"></button>
+              <button class="humeur__item humeur__item--active"></button>
+              <button class="humeur__item"></button>
+              <button class="humeur__item"></button>
+            </div>
+          </div>
         </div>
-
       </div>
 
-       <!-- BOTTOM -->
-        <div class="ready__content-bottom"></div>
-       <input type="text">
-       <button class="tags__btn tags__btn-button">
-        <span class="tags__icon-button">⚡</span>
-        <span class="tags__name">Button</span>
-      </button>
+<!-- Saisie Joueur -->
+<div class="player">
+  <label for="player-name" class="player__label">Quel est ton nom de joueur ?</label>
+  <div class="player__input-wrapper">
+    <input type="text" id="player-name" class="player__input" placeholder="Joueur Inconnu" />
+  </div>
+</div>
+</div>
 
+<!-- BOTTOM -->
+<div class="ready__content-bottom">
+<div class="challenge-box">
+  <div class="challenge-box__input-group">
+    <label class="challenge-box__label">Ton défi :</label>
+    <input type="text" class="challenge-box__input" value="#tous" readonly />
+  </div>
+  <button class="challenge-box__btn">Jouer avec ce défi</button>
+</div>
+</div>
 
-
-      <!-- MONSTER -->
-      <div class="monster__view"></div>
-
-      <div class="player">
-
-        <label for="player-name">
-          Quel est ton nom de joueur ?
-        </label>
-
-        <input type="text">
-      </div>
-    </div>
-
-
-  </section>
+</section>
 
 
 

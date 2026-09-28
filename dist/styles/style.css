@@ -736,6 +736,86 @@ p {
   }
 }
 .ready {
+  padding: 5rem;
   background: var(--color-dark);
   color: var(--color-light);
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas: "left right" "bottom bottom";
+}
+.ready__content-left {
+  border: solid pink;
+  grid-area: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.ready__content-right {
+  grid-area: right;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.ready__content-bottom {
+  grid-area: bottom;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: center;
+  padding-bottom: 1rem;
+  padding-top: 5rem;
+}
+.tags__btn {
+  padding: 1rem;
+  border-radius: 50px;
+  border: none;
+}
+.tags__btn-action {
+  background-color: var(--color-action);
+}
+.tags__btn-comedie {
+  background-color: var(--color-comedie);
+}
+.tags__btn-drame {
+  background-color: var(--color-drame);
+}
+
+.monster__view {
+  border: solid red;
+  width: 270px;
+  height: 300px;
+  aspect-ratio: 1;
+  background-image: url("../images/ghoster-red.svg");
+  background-position: -10px -10px;
+  background-repeat: no-repeat;
+}
+
+.humeur {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.humeur__label {
+  font-size: 0.75rem;
+  font-style: italic;
+  color: #888;
+}
+.humeur__list {
+  gap: 0.6rem;
+}
+.humeur__item {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background-color: #222;
+  background-image: url("../images/ghoster-red.svg");
+  background-size: 70%;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid transparent;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
