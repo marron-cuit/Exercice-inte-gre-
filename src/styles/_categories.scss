@@ -56,6 +56,31 @@
         font-weight: 300;
     }
 
+    &__title-action{
+      color: var(--color-action);
+    }
+    &__title-comedie{
+      color: var(--color-comedie);
+    }
+    &__title-drame{
+      color: var(--color-drame);
+    }
+    &__title-sciencefiction{
+      color: var(--color-sciencefiction);
+    }
+    &__title-horreur{
+      color: var(--color-horreur);
+    }
+    &__title-animation{
+      color: var(--color-animation);
+    }
+    &__title-classique{
+      color: var(--color-classique);
+    }
+    &__title-cultes{
+      color: var(--color-cultes);
+    }
+
   background-color: var(--color-dark);
   border: 1px solid var(--color-dark);
   border-radius: 8px;
@@ -80,49 +105,49 @@
 
         &--action{
         background-position-x: -7px;
-        background-color: rgb(225, 107, 107);
+        background-color: var(--color-action);
 
         }
 
         &--comedie{
         background-position-x: -32px;
-        background-color: rgb(121, 228, 194);
+        background-color: var(--color-comedie);
 
         }
 
          &--drame{
         background-position-x: -56px;
-        background-color: rgb(209, 98, 198);
+        background-color: var(--color-drame);
 
         }
 
          &--sciencefiction{
         background-position-x: -80px;
-        background-color: rgb(107, 160, 225);
+        background-color: var(--color-sciencefiction);
 
         }
 
         &--horreur{
         background-position-x: -104px;
-        background-color: rgb(67, 216, 208);
+        background-color: var(--color-horreur);
 
         }
 
         &--animation{
         background-position-x: -129px;
-        background-color: rgb(225, 168, 107);
+        background-color: var(--color-animation);
 
         }
 
         &--classique{
         background-position-x: -153px;
-        background-color: rgb(149, 236, 236);
+        background-color: var(--color-classique);
 
         }
 
         &--cultes{
         background-position-x: -177px;
-        background-color: rgb(225, 211, 107);
+        background-color: var(--color-cultes);
 
         }
      }

@@ -23,9 +23,7 @@ html {
   font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"; /* 1 */
   line-height: 1.15; /* 2 */
   -webkit-text-size-adjust: 100%; /* 3 */
-  -moz-tab-size: 4;
-    -o-tab-size: 4;
-       tab-size: 4; /* 4 */
+  tab-size: 4; /* 4 */
 }
 
 /*
@@ -215,6 +213,14 @@ summary {
   --color-blue: rgb(42, 212, 218);
   --color-grey: rgb(138, 138, 138);
   --color-darkgrey:rgb(56, 56, 56);
+  --color-action:rgb(225, 107, 107);
+  --color-comedie:rgb(121, 228, 194);
+  --color-drame:rgb(209, 98, 198);
+  --color-sciencefiction:rgb(107, 160, 225);
+  --color-horreur:rgb(67, 216, 208);
+  --color-animation:rgb(225, 168, 107);
+  --color-classique:rgb(149, 236, 236);
+  --color-cultes:rgb(225, 211, 107);
   --text-xs: 12px;
   --text-m: 20px;
   --text-lg: 35px;
@@ -460,6 +466,155 @@ p {
     line-height: 1;
   }
 }
+.categories {
+  background-image: url("../images/pattern-dark.png");
+  background-repeat: repeat;
+  background-size: 300px;
+  color: var(--color-light);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 40px 80px;
+  position: relative;
+  padding-top: 100px;
+}
+.categories__header {
+  margin-bottom: 40px;
+}
+.categories__header h1 {
+  color: var(--color-pink);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.categories__header h2 {
+  font-size: var(--text-lg);
+  margin-bottom: 10px;
+}
+.categories__header p {
+  font-weight: 100;
+  font-size: var(--text-xs);
+}
+.categories__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.categories-card p {
+  font-size: var(--text-xs);
+  font-weight: 300;
+}
+.categories-card__title-action {
+  color: var(--color-action);
+}
+.categories-card__title-comedie {
+  color: var(--color-comedie);
+}
+.categories-card__title-drame {
+  color: var(--color-drame);
+}
+.categories-card__title-sciencefiction {
+  color: var(--color-sciencefiction);
+}
+.categories-card__title-horreur {
+  color: var(--color-horreur);
+}
+.categories-card__title-animation {
+  color: var(--color-animation);
+}
+.categories-card__title-classique {
+  color: var(--color-classique);
+}
+.categories-card__title-cultes {
+  color: var(--color-cultes);
+}
+.categories-card {
+  background-color: var(--color-dark);
+  border: 1px solid var(--color-dark);
+  border-radius: 8px;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+.categories-card__icon {
+  background-image: url("../images/icon/category/dark.svg");
+  background-size: auto 150%;
+  background-position: 0 center;
+  border-radius: 50px;
+  aspect-ratio: 1;
+  height: 30px;
+  display: inline-block;
+}
+.categories-card__icon--action {
+  background-position-x: -7px;
+  background-color: var(--color-action);
+}
+.categories-card__icon--comedie {
+  background-position-x: -32px;
+  background-color: var(--color-comedie);
+}
+.categories-card__icon--drame {
+  background-position-x: -56px;
+  background-color: var(--color-drame);
+}
+.categories-card__icon--sciencefiction {
+  background-position-x: -80px;
+  background-color: var(--color-sciencefiction);
+}
+.categories-card__icon--horreur {
+  background-position-x: -104px;
+  background-color: var(--color-horreur);
+}
+.categories-card__icon--animation {
+  background-position-x: -129px;
+  background-color: var(--color-animation);
+}
+.categories-card__icon--classique {
+  background-position-x: -153px;
+  background-color: var(--color-classique);
+}
+.categories-card__icon--cultes {
+  background-position-x: -177px;
+  background-color: var(--color-cultes);
+}
+
+@media (max-width: 768px) {
+  .categories {
+    padding: 2rem 3rem;
+  }
+  .categories__header {
+    margin-bottom: 24px;
+  }
+  .categories__grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .categories-card {
+    padding: 20px 16px;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    column-gap: 16px;
+    row-gap: 6px;
+    align-items: center;
+  }
+  .categories-card__icon {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .categories-card__title {
+    grid-column: 1;
+    grid-row: 2;
+    margin: 0;
+  }
+  .categories-card__description {
+    grid-column: 2;
+    grid-row: 1/span 2;
+    align-self: center;
+  }
+}
 .monster {
   display: flex;
   align-items: flex-start;
@@ -580,129 +735,7 @@ p {
     text-align: center;
   }
 }
-.categories {
-  background-image: url("../images/pattern-dark.png");
-  background-repeat: repeat;
-  background-size: 300px;
+.ready {
+  background: var(--color-dark);
   color: var(--color-light);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
-  padding: 40px 80px;
-  position: relative;
-  padding-top: 100px;
-}
-.categories__header {
-  margin-bottom: 40px;
-}
-.categories__header h1 {
-  color: var(--color-pink);
-  font-size: var(--text-xs);
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
-.categories__header h2 {
-  font-size: var(--text-lg);
-  margin-bottom: 10px;
-}
-.categories__header p {
-  font-weight: 100;
-  font-size: var(--text-xs);
-}
-.categories__grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
-.categories-card p {
-  font-size: var(--text-xs);
-  font-weight: 300;
-}
-.categories-card {
-  background-color: var(--color-dark);
-  border: 1px solid var(--color-dark);
-  border-radius: 8px;
-  padding: 32px 24px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 5px;
-}
-.categories-card__icon {
-  background-image: url("../images/icon/category/dark.svg");
-  background-size: auto 150%;
-  background-position: 0 center;
-  border-radius: 50px;
-  aspect-ratio: 1;
-  height: 30px;
-  display: inline-block;
-}
-.categories-card__icon--action {
-  background-position-x: -7px;
-  background-color: rgb(225, 107, 107);
-}
-.categories-card__icon--comedie {
-  background-position-x: -32px;
-  background-color: rgb(121, 228, 194);
-}
-.categories-card__icon--drame {
-  background-position-x: -56px;
-  background-color: rgb(209, 98, 198);
-}
-.categories-card__icon--sciencefiction {
-  background-position-x: -80px;
-  background-color: rgb(107, 160, 225);
-}
-.categories-card__icon--horreur {
-  background-position-x: -104px;
-  background-color: rgb(67, 216, 208);
-}
-.categories-card__icon--animation {
-  background-position-x: -129px;
-  background-color: rgb(225, 168, 107);
-}
-.categories-card__icon--classique {
-  background-position-x: -153px;
-  background-color: rgb(149, 236, 236);
-}
-.categories-card__icon--cultes {
-  background-position-x: -177px;
-  background-color: rgb(225, 211, 107);
-}
-
-@media (max-width: 768px) {
-  .categories {
-    padding: 2rem 3rem;
-  }
-  .categories__header {
-    margin-bottom: 24px;
-  }
-  .categories__grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-  .categories-card {
-    padding: 20px 16px;
-    display: grid;
-    grid-template-columns: 100px 1fr;
-    -moz-column-gap: 16px;
-         column-gap: 16px;
-    row-gap: 6px;
-    align-items: center;
-  }
-  .categories-card__icon {
-    grid-column: 1;
-    grid-row: 1;
-  }
-  .categories-card__title {
-    grid-column: 1;
-    grid-row: 2;
-    margin: 0;
-  }
-  .categories-card__description {
-    grid-column: 2;
-    grid-row: 1/span 2;
-    align-self: center;
-  }
 }/*# sourceMappingURL=style.css.map */

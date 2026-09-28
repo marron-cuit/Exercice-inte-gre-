@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>movie-king</title>
+  <link rel="stylesheet" href="styles/style.min.css">
+</head>
+<body>
+
+
+    <!--Nav principale-->
+    <nav class="navbar">
+
+      <a href="#" class="navbar__logo">
+        <img src="images/LOGO-FULL.svg" alt="Movie Kings">
+      </a>
+
+<ul class="navbar__menu">
+
+   <li class="navbar__item">
+    <a href="home.html" class="navbar__link">
+    <span class="navbar__link-icon navbar__link-icon--accueil" aria-hidden="true"></span>
+    Accueil
+    </a>
+  </li>
+
+
+   <li class="navbar__item">
+    <a href="game.html" class="navbar__link">
+    <span class="navbar__link-icon navbar__link-icon--jouer" aria-hidden="true"></span>
+    Jouer
+    </a>
+  </li>
+
+
+
+  <li class="navbar__item">
+    <a href="#" class="navbar__link">
+    <span class="navbar__link-icon navbar__link-icon--classement" aria-hidden="true"></span>
+    Classement
+    </a>
+  </li>
+</ul>
+
+
+    <!--Langues-->
+
+    <ul class="navbar__speaking">
+      <li>
+        <a href="#" class="navbar__languages navbar__languages-fr">FR</a>
+      </li>
+      <li>
+        <a href="#" class="navbar__languages navbar__languages-en">EN</a>
+      </li>
+      <li>
+        <a href="#" class="navbar__languages navbar__languages-de">DE</a>
+      </li>
+    </ul>
+  </nav>
+
+ <!--Ready ?-->
+ <main>
+  <section class="ready">
+
+    <!-- COLONNE GAUCHE -->
+    <div class="ready__content-left">
+
+      <h1 class="ready__content-left-title">
+        Prêt à jouer ?
+      </h1>
+
+      <p class="ready__content-left-description">
+        Choisis ton défi dans les catégories suivantes et prépare-toi à reconnaître
+        les répliques les plus cultes du cinéma.
+      </p>
+
+      <p class="category__label">
+        « Choisis une ou plusieurs catégories »
+      </p>
+
+      <div class="tags">
+
+        <button class="tags__btn tags__btn-action">
+          <span class="tags__icon-action">⚡</span>
+          <span class="tags__name">Action</span>
+        </button>
+
+        <button class="tags__btn tags__btn-comedie">
+          <span class="tags__icon-comedie">⚡</span>
+          <span class="tags__name">Comédie</span>
+        </button>
+
+        <button class="tags__btn tags__btn-drame">
+          <span class="tags__icon-drame">⚡</span>
+          <span class="tags__name">Drame</span>
+        </button>
+
+        <button class="tags__btn tags__btn-sciencefiction">
+          <span class="tags__icon-sciencefiction">⚡</span>
+          <span class="tags__name">Science-fiction</span>
+        </button>
+
+        <button class="tags__btn tags__btn-horreur">
+          <span class="tags__icon-horreur">⚡</span>
+          <span class="tags__name">Horreur</span>
+        </button>
+
+        <button class="tags__btn tags__btn-animation">
+          <span class="tags__icon-animation">⚡</span>
+          <span class="tags__name">Animation</span>
+        </button>
+
+        <button class="tags__btn tags__btn-classique">
+          <span class="tags__icon-classique">⚡</span>
+          <span class="tags__name">Classique</span>
+        </button>
+
+        <button class="tags__btn tags__btn-culte">
+          <span class="tags__icon-culte">⚡</span>
+          <span class="tags__name">Culte</span>
+        </button>
+
+        <button class="tags__btn tags__btn-aleatoire">
+          <span class="tags__icon-aleatoire">⚡</span>
+          <span class="tags__name">Aléatoire</span>
+        </button>
+
+        <button class="tags__btn tags__btn-button">
+          <span class="tags__icon-button">⚡</span>
+          <span class="tags__name">Button</span>
+        </button>
+
+      </div>
+    </div>
+
+
+    <!-- COLONNE DROITE -->
+    <div class="hero__content-right">
+
+      <h2 class="hero__content-right-title">
+        Faisons connaissance !
+      </h2>
+
+      <div class="character-options">
+
+        <div class="colors">
+          <span class="color color--red"></span>
+          <span class="color color--turquoise"></span>
+          <span class="color color--white"></span>
+        </div>
+
+        <div class="humeur">
+          <span class="humeur-1">♜</span>
+          <span class="humeur-2">♜</span>
+          <span class="humeur-3">♜</span>
+          <span class="humeur-4">♜</span>
+        </div>
+
+      </div>
+
+      <!-- MONSTER -->
+      <div class="monster__view">
+        <img src="images/king-crown.png" alt="Couronne">
+      </div>
+
+      <div class="player">
+
+        <label for="player-name">
+          Quel est ton nom de joueur ?
+        </label>
+
+        <input
+          type="text"
+          id="player-name"
+          name="player-name"
+        >
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  
+</main>
+
+  </body>
+  </html>
