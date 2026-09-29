@@ -23,7 +23,9 @@ html {
   font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"; /* 1 */
   line-height: 1.15; /* 2 */
   -webkit-text-size-adjust: 100%; /* 3 */
-  tab-size: 4; /* 4 */
+  -moz-tab-size: 4;
+    -o-tab-size: 4;
+       tab-size: 4; /* 4 */
 }
 
 /*
@@ -220,7 +222,9 @@ summary {
   --color-horreur:rgb(67, 216, 208);
   --color-animation:rgb(225, 168, 107);
   --color-classique:rgb(149, 236, 236);
-  --color-cultes:rgb(225, 211, 107);
+  --color-culte:rgb(225, 211, 107);
+  --color-aleatoire:rgb(191, 191, 190);
+  --color-tous:rgb(229, 229, 229);
   --text-xs: 12px;
   --text-m: 20px;
   --text-lg: 35px;
@@ -596,7 +600,8 @@ p {
     padding: 20px 16px;
     display: grid;
     grid-template-columns: 100px 1fr;
-    column-gap: 16px;
+    -moz-column-gap: 16px;
+         column-gap: 16px;
     row-gap: 6px;
     align-items: center;
   }
@@ -744,20 +749,67 @@ p {
   grid-template-areas: "left right" "bottom bottom";
 }
 .ready__content-left {
-  border: solid pink;
   grid-area: left;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  padding-right: 7rem;
+  height: 100%;
+  justify-content: space-between;
 }
 .ready__content-right {
   grid-area: right;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   gap: 2rem;
 }
 .ready__content-bottom {
   grid-area: bottom;
+  margin-top: 2rem;
+}
+.ready__content-bottom__challenge-label {
+  display: block;
+  font-size: 0.85rem;
+}
+
+.ready__categories-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.category__label {
+  font-style: italic;
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+.challenge-box {
+  padding: 0.8rem;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+}
+.challenge-box__input-group {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+.challenge-box__btn {
+  background-color: var(--color-yellow);
+  color: var(--color-dark);
+  font-size: 1.1rem;
+  font-weight: 800;
+  border: none;
+  padding: 1rem 2.5rem;
+}
+.challenge-box__input {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  font-size: 1.1rem;
 }
 
 .tags {
@@ -765,26 +817,111 @@ p {
   flex-wrap: wrap;
   gap: 0.6rem;
   align-items: center;
-  padding-bottom: 1rem;
-  padding-top: 5rem;
+  padding: 1.25rem 1rem;
+  align-self: flex-start;
+  width: 100%;
+  border-bottom: 1.5px dashed rgba(255, 255, 255, 0.2);
+  border-top: 1.5px dashed rgba(255, 255, 255, 0.2);
+}
+.tags__icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/icon/category/dark.svg");
+  background-repeat: no-repeat;
+  background-size: auto 35px;
+  flex-shrink: 0;
+}
+.tags__name {
+  display: none;
 }
 .tags__btn {
-  padding: 1rem;
-  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  height: 40px;
+  min-width: 40px;
+  padding: 0 0.75rem;
   border: none;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  opacity: 0.5;
 }
-.tags__btn-action {
+.tags__btn:hover, .tags__btn.tags__btn--active, .tags__btn[aria-pressed=true] {
+  opacity: 1;
+  padding: 0 1.25rem;
+}
+.tags__btn:hover .tags__name, .tags__btn.tags__btn--active .tags__name, .tags__btn[aria-pressed=true] .tags__name {
+  display: inline;
+}
+.tags__btn--action .tags__icon {
+  background-position: -8px -8px;
+}
+.tags__btn--comedie .tags__icon {
+  background-position: -26px -8px;
+}
+.tags__btn--drame .tags__icon {
+  background-position: -45px -8px;
+}
+.tags__btn--sciencefiction .tags__icon {
+  background-position: -64px -8px;
+}
+.tags__btn--horreur .tags__icon {
+  background-position: -84px -8px;
+}
+.tags__btn--classique .tags__icon {
+  background-position: -103px -8px;
+}
+.tags__btn--culte .tags__icon {
+  background-position: -120px -8px;
+}
+.tags__btn--animation .tags__icon {
+  background-position: -144px -8px;
+}
+.tags__btn--aleatoire .tags__icon {
+  background-position: -168px -8px;
+}
+.tags__btn--other .tags__icon {
+  background-position: -192px -8px;
+}
+.tags__btn--action {
   background-color: var(--color-action);
 }
-.tags__btn-comedie {
+.tags__btn--comedie {
   background-color: var(--color-comedie);
 }
-.tags__btn-drame {
+.tags__btn--drame {
   background-color: var(--color-drame);
+}
+.tags__btn--sciencefiction {
+  background-color: var(--color-sciencefiction);
+}
+.tags__btn--horreur {
+  background-color: var(--color-horreur);
+}
+.tags__btn--animation {
+  background-color: var(--color-animation);
+}
+.tags__btn--classique {
+  background-color: var(--color-classique);
+}
+.tags__btn--culte {
+  background-color: var(--color-culte);
+}
+.tags__btn--aleatoire {
+  background-color: var(--color-aleatoire);
+}
+
+.character-display {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .monster__view {
-  border: solid red;
   width: 270px;
   height: 300px;
   aspect-ratio: 1;
@@ -793,11 +930,19 @@ p {
   background-repeat: no-repeat;
 }
 
+.character-middle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
 .humeur {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
+  margin-top: -2rem;
 }
 .humeur__label {
   font-size: 0.75rem;
@@ -805,7 +950,9 @@ p {
   color: #888;
 }
 .humeur__list {
-  gap: 0.6rem;
+  flex-direction: column;
+  display: flex;
+  gap: 1rem;
 }
 .humeur__item {
   width: 44px;
@@ -813,9 +960,205 @@ p {
   border-radius: 8px;
   background-color: #222;
   background-image: url("../images/ghoster-red.svg");
-  background-size: 70%;
+  background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
-  border: 1px solid transparent;
+  border: 1px dashed #555;
   cursor: pointer;
+}
+.humeur__item:nth-child(1) {
+  background-position: 0px 0px;
+}
+.humeur__item:nth-child(2) {
+  background-position: 0 -43px;
+}
+.humeur__item:nth-child(3) {
+  background-position: 0 -84px;
+}
+.humeur__item:nth-child(4) {
+  background-position: 0 -125px;
+}
+
+.character-picker {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+}
+.character-picker .colors {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 2rem;
+}
+.character-picker .colors__label {
+  color: var(--color-light);
+  font-style: italic;
+  font-size: 0.5rem;
+}
+.character-picker .colors__list {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.character-picker .color {
+  width: 32px;
+  height: 32px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.character-picker .color--red {
+  background-color: var(--color-pink);
+}
+.character-picker .color--teal {
+  background-color: var(--color-blue);
+}
+.character-picker .color--white {
+  background-color: var(--color-tous);
+}
+.character-picker .color--active {
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+}
+
+.classement {
+  padding-inline: 5rem;
+  background-image: url("../images/pattern-dark.png");
+  background-repeat: repeat;
+  background-size: 300px;
+  color: var(--color-light);
+}
+.classement-header {
+  background-image: url("../images/pattern-dark.png");
+  background-repeat: repeat;
+  background-size: 300px;
+  display: flex;
+  flex-direction: column;
+}
+.classement .main—title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin: 0 0 16px 0;
+}
+.classement .subtile {
+  color: var(--color-yellow);
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.classement .section-title {
+  font-size: 2.2rem;
+  font-weight: 900;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.timer-banner {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  border-radius: 6px;
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.classement-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+.classement-table tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.classement-table td {
+  padding: 16px 8px;
+  vertical-align: middle;
+}
+.classement-table .col-player {
+  white-space: nowrap;
+}
+.classement-table .col-player .rank {
+  font-weight: 800;
+  font-size: 1.1rem;
+  margin-right: 12px;
+}
+.classement-table .col-player .rank.gold {
+  color: #f5a623;
+}
+.classement-table .col-player .rank.silver {
+  color: #d0d0d0;
+}
+.classement-table .col-player .rank.bronze {
+  color: #e67e22;
+}
+.classement-table .col-player .username {
+  font-weight: 800;
+  font-size: 1.05rem;
+  color: #ffffff;
+}
+.classement-table .col-tags {
+  width: 100%;
+}
+.classement-table .col-tags .tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-dark);
+  margin-right: 6px;
+  margin-bottom: 4px;
+}
+.classement-table .col-tags .tag.tag-circle {
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  border-radius: 50%;
+}
+.classement-table .col-tags .tag.tag-tous {
+  background-color: var(--color-tous);
+}
+.classement-table .col-tags .tag.tag-action {
+  background-color: var(--color-action);
+}
+.classement-table .col-tags .tag.tag-culte {
+  background-color: var(--color-culte);
+}
+.classement-table .col-tags .tag.tag-drame {
+  background-color: var(--color-drame);
+}
+.classement-table .col-tags .tag.tag-sciencefiction {
+  background-color: var(--color-sciencefiction);
+}
+.classement-table .col-tags .tag.tag-horreur {
+  background-color: var(--color-horreur);
+}
+.classement-table .col-tags .tag.tag-classique {
+  background-color: var(--color-classique);
+}
+.classement-table .col-score {
+  text-align: right;
+  white-space: nowrap;
+  min-width: 100px;
+}
+.classement-table .col-score .progress-bar {
+  width: 100%;
+  height: 5px;
+  background-color: rgba(255, 255, 255, 0.12);
+  border-radius: 3px;
+  margin-top: 6px;
+  overflow: hidden;
+}
+.classement-table .col-score .fill {
+  height: 100%;
+  background-color: var(--color-yellow);
+  border-radius: 3px;
 }/*# sourceMappingURL=style.css.map */

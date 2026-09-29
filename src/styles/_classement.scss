@@ -1,0 +1,153 @@
+ .classement{
+padding-inline: 5rem;
+ background-image: url('../images/pattern-dark.png');
+  background-repeat: repeat;
+  background-size: 300px;
+  color: var(--color-light);
+
+
+&-header {
+  background-image: url('../images/pattern-dark.png');
+  background-repeat: repeat;
+  background-size: 300px;
+  display: flex;
+  flex-direction: column;
+
+  }
+
+    .main—title {
+      font-size: 3.5rem;
+      font-weight: 900;
+      margin: 0 0 16px 0;
+    }
+
+
+    .subtile {
+    color: var(--color-yellow);
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    }
+
+    .section-title {
+    font-size: 2.2rem;
+    font-weight: 900;
+    margin: 0;
+    display: flex;
+    align-items: center;}
+}
+
+
+.timer-banner {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  border-radius: 6px;
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+  .classement-table {
+  width: 100%;
+  border-collapse: collapse; // Supprime les espaces inutiles entre les cellules
+  margin-top: 20px;
+
+
+  tr {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  td {
+    padding: 16px 8px;
+    vertical-align: middle;
+  }
+
+// --- COLONNE 1 : Joueur ---
+
+.col-player {
+    white-space: nowrap;
+    
+    .rank {
+      font-weight: 800;
+      font-size: 1.1rem;
+      margin-right: 12px;
+
+      &.gold { color: #f5a623; }
+      &.silver { color: #d0d0d0; }
+      &.bronze { color: #e67e22; }
+    }
+
+    .username {
+      font-weight: 800;
+      font-size: 1.05rem;
+      color: #ffffff;
+    }
+  }
+
+// --- COLONNE 2 : Badges ---
+  .col-tags {
+    width: 100%; // Prend tout l'espace disponible au milieu
+    
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--color-dark);
+      
+      margin-right: 6px;
+      margin-bottom: 4px;
+
+      &.tag-circle {
+        padding: 0;
+        width: 30px;
+        height: 30px;
+        justify-content: center;
+        border-radius: 50%;
+        
+      }
+
+      &.tag-tous { background-color: var(--color-tous); }
+      &.tag-action { background-color: var(--color-action); }
+      &.tag-culte { background-color: var(--color-culte); }
+      &.tag-drame { background-color: var(--color-drame); }
+      &.tag-sciencefiction { background-color: var(--color-sciencefiction); }
+      &.tag-horreur { background-color: var(--color-horreur); }
+      &.tag-classique { background-color: var(--color-classique); }
+    }
+ }
+
+
+    // --- COLONNE 3 : Score ---
+
+    .col-score {
+    text-align: right;
+    white-space: nowrap;
+    min-width: 100px;
+
+    .progress-bar {
+      width: 100%;
+      height: 5px;
+      background-color: rgba(255, 255, 255, 0.12);
+      border-radius: 3px;
+      margin-top: 6px;
+      overflow: hidden;}
+
+    .fill {
+      height: 100%;
+      background-color:var(--color-yellow);
+      border-radius: 3px;
+      }
+    }
+
+ }
+
+   
+

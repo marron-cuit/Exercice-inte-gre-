@@ -61,6 +61,7 @@
 
  <!--Ready ?-->
  <main>
+
   <section class="ready">
 
     <!-- COLONNE GAUCHE -->
@@ -75,68 +76,76 @@
         les répliques les plus cultes du cinéma.
       </p>
 
-      <p class="category__label">
+      <div class="ready__categories-group"></div>
+
+        <p class="category__label">
         « Choisis une ou plusieurs catégories »
       </p>
 
-      <div class="tags">
 
-        <button class="tags__btn tags__btn-action">
-          <span class="tags__icon-action">⚡</span>
-          <span class="tags__name">Action</span>
-        </button>
+ <!-- categories -->
 
-        <button class="tags__btn tags__btn-comedie">
-          <span class="tags__icon-comedie">⚡</span>
-          <span class="tags__name">Comédie</span>
-        </button>
+     <div class="tags">
 
-        <button class="tags__btn tags__btn-drame">
-          <span class="tags__icon-drame">⚡</span>
-          <span class="tags__name">Drame</span>
-        </button>
+  <button class="tags__btn tags__btn--action tags__btn--active" type="button">
+    <span class="tags__icon"></span>
+    <span class="tags__name">Action</span>
+  </button>
 
-        <button class="tags__btn tags__btn-sciencefiction">
-          <span class="tags__icon-sciencefiction">⚡</span>
-          <span class="tags__name">Science-fiction</span>
-        </button>
+  <button class="tags__btn tags__btn--comedie" type="button">
+    <span class="tags__icon"></span>
+    <span class="tags__name">Comédie</span>
+  </button>
 
-        <button class="tags__btn tags__btn-horreur">
-          <span class="tags__icon-horreur">⚡</span>
-          <span class="tags__name">Horreur</span>
-        </button>
+  <button class="tags__btn tags__btn--drame" type="button">
+    <span class="tags__icon"></span>
+    <span class="tags__name">Drame</span>
+  </button>
 
-        <button class="tags__btn tags__btn-animation">
-          <span class="tags__icon-animation">⚡</span>
-          <span class="tags__name">Animation</span>
-        </button>
+  <button class="tags__btn tags__btn--sciencefiction" type="button">
+    <span class="tags__icon"></span>
+    <span class="tags__name">Science-fiction</span>
+  </button>
 
-        <button class="tags__btn tags__btn-classique">
-          <span class="tags__icon-classique">⚡</span>
-          <span class="tags__name">Classique</span>
-        </button>
+  <button class="tags__btn tags__btn--horreur tags__btn--active" type="button">
+    <span class="tags__icon"></span>
+    <span class="tags__name">Horreur</span>
+  </button>
 
-        <button class="tags__btn tags__btn-culte">
-          <span class="tags__icon-culte">⚡</span>
-          <span class="tags__name">Culte</span>
-        </button>
+  <button class="tags__btn tags__btn--classique" type="button">
+    <span class="tags__icon"></span>
+    <span class="tags__name">Classique</span>
+  </button>
 
-        <button class="tags__btn tags__btn-aleatoire">
-          <span class="tags__icon-aleatoire">⚡</span>
-          <span class="tags__name">Aléatoire</span>
-        </button>
+  <button class="tags__btn tags__btn--culte" type="button">
+    <span class="tags__icon"></span>
+    <span class="tags__name">Culte</span>
+  </button>
 
-        <button class="tags__btn tags__btn-button">
-          <span class="tags__icon-button">⚡</span>
-          <span class="tags__name">Button</span>
-        </button>
+  <button class="tags__btn tags__btn--animation" type="button">
+    <span class="tags__icon"></span>
+    <span class="tags__name">Animation</span>
+  </button>
 
-      </div>
+  <button class="tags__btn tags__btn--aleatoire" type="button">
+    <span class="tags__icon"></span>
+    <span class="tags__name">Aléatoire</span>
+  </button>
+
+  <button class="tags__btn tags__btn--other" type="button">
+    <span class="tags__icon"></span>
+    <span class="tags__name">Autre</span>
+  </button>
+</div>
+
+</div>
     </div>
 
     <!-- COLONNE DROITE -->
     <div class="ready__content-right">
       <h2 class="ready__content-right-title">Faisons connaissance !</h2>
+
+       
 
       <div class="character-picker">
         <!-- Palette de couleurs -->
@@ -150,14 +159,16 @@
         </div>
 
         <!-- Zone Monstre + Humeurs -->
-        <div class="character-display">
-          <div class="monster__view"></div>
+    <div class="character-middle">
+      <div class="character-display">
+        <div class="monster__view"></div>
+      </div>
 
-          <div class="humeur">
-            <span class="humeur__label">humeur</span>
-            <div class="humeur__list">
+      <div class="humeur">
+          <span class="humeur__label">humeur</span>
+          <div class="humeur__list">
               <button class="humeur__item"></button>
-              <button class="humeur__item humeur__item--active"></button>
+              <button class="humeur__item"></button>
               <button class="humeur__item"></button>
               <button class="humeur__item"></button>
             </div>
@@ -176,16 +187,129 @@
 
 <!-- BOTTOM -->
 <div class="ready__content-bottom">
-<div class="challenge-box">
-  <div class="challenge-box__input-group">
-    <label class="challenge-box__label">Ton défi :</label>
+  <span class="ready__challenge-label">Ton défi :</span>
+
+  <div class="challenge-box">
     <input type="text" class="challenge-box__input" value="#tous" readonly />
+    <button class="challenge-box__btn">Jouer avec ce défi</button>
   </div>
-  <button class="challenge-box__btn">Jouer avec ce défi</button>
-</div>
 </div>
 
 </section>
+
+
+
+<!-- CLASSEMENT -->
+
+<section class="classement">
+
+  <div class="classement-container">
+  <!-- En-tête -->
+  <header class="classement-header">
+    <h1 class="main-title">Classement !</h1>
+    <span class="subtitle">RÉPLIQUES CULTES | CLASSEMENT VF</span>
+    <h2 class="section-title">
+      Les rois du jour <span class="crown-icon">👑</span>
+    </h2>
+  </header>
+
+  <!-- Bannière compte à rebours -->
+  <div class="timer-banner">
+    <span class="timer-text">Prochain podium dévoilé dans ...</span>
+    <div class="timer-clock">
+      <span class="time">08 : 42</span>
+      <span class="divider">|</span>
+      <span class="seconds">16</span>
+    </div>
+  </div>
+
+
+
+  <!-- Liste des classements -->
+ <table class="classement-table">
+  <tbody>
+    <!-- LIGNE 1 -->
+    <tr>
+      <!-- Colonne 1 : Rang + Pseudo -->
+      <td class="col-player">
+        <span class="rank gold">1 👑</span>
+        <span class="username">QueenKong1990</span>
+      </td>
+
+      <!-- Colonne 2 : Tags -->
+      <td class="col-tags">
+        <span class="tag tag-tous"><i class="icon">✱</i> Tous</span>
+      </td>
+
+      <!-- Colonne 3 : Score + Barre -->
+      <td class="col-score">
+        <div class="score-value">
+          <span class="percent">96 %</span>
+          <span class="star">☆</span>
+        </div>
+        <div class="progress-bar">
+          <div class="fill" style="width: 96%;"></div>
+        </div>
+      </td>
+    </tr>
+
+    <!-- LIGNE 2 -->
+    <tr>
+      <td class="col-player">
+        <span class="rank silver">2 👑</span>
+        <span class="username">CarnivalDuckShoot</span>
+      </td>
+      <td class="col-tags">
+        <span class="tag tag-action"><i class="icon">⚡</i> Action</span>
+        <span class="tag tag-culte"><i class="icon">🎞</i> Culte</span>
+        <span class="tag tag-drame"><i class="icon">♡</i> Drame</span>
+      </td>
+      <td class="col-score">
+        <div class="score-value">
+          <span class="percent">94 %</span>
+          <span class="star">☆</span>
+        </div>
+        <div class="progress-bar">
+          <div class="fill" style="width: 94%;"></div>
+        </div>
+      </td>
+    </tr>
+
+    <!-- LIGNE 3 -->
+    <tr>
+      <td class="col-player">
+        <span class="rank bronze">3 👑</span>
+        <span class="username">Rachel_Welsh69</span>
+      </td>
+      <td class="col-tags">
+        <span class="tag tag-sciencefiction"><i class="icon">🚀</i> Science-fiction</span>
+        <span class="tag tag-horreur"><i class="icon">👻</i> Horreur</span>
+        <span class="tag tag-circle tag-action"><i class="icon">⚡</i></span>
+        <span class="tag tag-circle tag-classique"><i class="icon">🏆</i></span>
+        <span class="tag tag-circle tag-drame"><i class="icon">♡</i></span>
+      </td>
+      <td class="col-score">
+        <div class="score-value">
+          <span class="percent">92 %</span>
+          <span class="star">☆</span>
+        </div>
+        <div class="progress-bar">
+          <div class="fill" style="width: 92%;"></div>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+</section>
+
+
+
+
 
 
 
