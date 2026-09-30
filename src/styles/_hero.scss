@@ -13,6 +13,10 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 30px;
+    transform: rotate(1deg);
+    
+   
+   
 
   }
 
@@ -33,11 +37,16 @@
   }
 
   &__button {
-    background-color: var(--color-yellow);
+    background: var(--gradient-yellow);
+
+
     padding: 10px;
     border: 3px solid black;
     font-weight: 900;
     font-size: var(--text-lg);
+    white-space: normal;
+    max-width: 250px;
+    text-align: left;
   }
 
   &__img-mobile {
@@ -96,6 +105,7 @@
 
     &__button{
       white-space: nowrap;
+      max-width: none;
     }
 
   }

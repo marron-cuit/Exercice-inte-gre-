@@ -9,14 +9,14 @@
    
   color: var(--color-light);
    
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
-  padding: 40px 80px;
+  
 
-  position: relative;
-  padding-top: 100px;
+  padding: 40px 80px;
+  padding-top: 8rem;
+
+
+  
+  
 
 
 
@@ -34,7 +34,7 @@
       font-size: var(--text-lg);
       margin-bottom: 10px;
 
-    }
+  }
     p{
       font-weight: 100;
       font-size: var(--text-xs);
@@ -161,6 +161,7 @@
 @media (max-width: 768px) {
   .categories{
     padding: 2rem 3rem;
+    padding-top: 8rem;
     
 
     &__header {

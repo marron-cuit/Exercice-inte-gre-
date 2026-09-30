@@ -9,11 +9,15 @@
 <body>
 
 
+  <div class="page">
+
+
     <!--Nav principale-->
     <nav class="navbar">
 
       <a href="#" class="navbar__logo">
-        <img src="images/LOGO-FULL.svg" alt="Movie Kings">
+        <img src="images/logo-full.svg" class="navbar__logo-img--desktop" alt="Movie Kings">
+        <img src="images/logo-short.svg" class="navbar__logo-img--mobile" alt="Movie Kings">
       </a>
 
 <ul class="navbar__menu">
@@ -43,18 +47,26 @@
   </li>
 </ul>
 
+    <!--Burger menu-->
+
+    <button class="navbar__burger" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
 
     <!--Langues-->
 
     <ul class="navbar__speaking">
       <li>
-        <a href="#" class="navbar__languages navbar__languages-fr">FR</a>
+        <a href="#" class="navbar__languages navbar__languages--active">FR</a>
       </li>
       <li>
-        <a href="#" class="navbar__languages navbar__languages-en">EN</a>
+        <a href="#" class="navbar__languages navbar__languages">EN</a>
       </li>
       <li>
-        <a href="#" class="navbar__languages navbar__languages-de">DE</a>
+        <a href="#" class="navbar__languages navbar__languages">DE</a>
       </li>
     </ul>
   </nav>
@@ -101,7 +113,7 @@
           Phase du jeu </h1>
 
         <h2 class="regle__title">
-          Comment jouer ? </h2>
+          Comment jouer <span class="crown-wrapper">?</span> </h2>
 
         <p class="regle__description">
           Chaque semaine, les meilleurs joueurs sont couronnés et remportent des récompenses.
@@ -298,9 +310,17 @@
 
 <footer class="footer">
 
+  <div class="footer__left">
+
       <a href="#" class="footer__logo">
-        <img src="images/LOGO-FULL.svg" alt="Movie Kings">
+        <img src="images/logo-short-white.svg" alt="Movie Kings">
       </a>
+
+      <a>
+        <span class="footer__copyright">© 2027 Movie Kings</span>
+      </a>
+
+    </div>
 
     <ul class="footer__menu">
 
@@ -328,5 +348,10 @@
     </ul>
   </footer>
 
+
+</div>
+
 </body>
+
+
 </html>

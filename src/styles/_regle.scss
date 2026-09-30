@@ -16,6 +16,25 @@
       font-size: var(--text-lg);
       margin-bottom: 10px;
 
+
+      .crown-wrapper {
+
+        &::before {
+          content: '';
+        display: inline-block;
+        position: absolute;
+
+      
+        width: 35px; 
+        height: 35px;
+
+        transform: translate(-10%, -70%);
+
+        background-image: url('../images/king-crown.png');
+        background-size: contain; 
+      }  
+    }
+
     }
     p{
       font-weight: 100;

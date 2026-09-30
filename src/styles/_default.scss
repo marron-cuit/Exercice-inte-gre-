@@ -8,6 +8,8 @@ body {
   font-family: "Rubik";
   font-weight: 400;
   background-color: var(--color-light);
+
+ 
 }
 
 a { 
@@ -22,4 +24,9 @@ ul {
 h1,h2,h3,
 p {
   margin: 0;
+}
+
+.page {
+  width: min(100% - 40px, 1440px);
+  margin-inline: auto;
 }
